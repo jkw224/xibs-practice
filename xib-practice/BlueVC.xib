@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueVC" customModule="xib_practice" customModuleProvider="target">
+            <connections>
+                <outlet property="goToRed" destination="luf-mX-OVa" id="smg-WZ-YEE"/>
+                <outlet property="goToRedBtn" destination="luf-mX-OVa" id="aHp-Bi-3ww"/>
+                <outlet property="view" destination="6oP-0T-oLU" id="zaF-AN-cfr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6oP-0T-oLU">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luf-mX-OVa">
+                    <rect key="frame" x="212" y="279" width="176" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="176" id="Gyj-BR-Vae"/>
+                        <constraint firstAttribute="height" constant="30" id="ZtV-YU-wvg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                    <state key="normal" title="Go To Red"/>
+                    <connections>
+                        <action selector="loadRed:" destination="-1" eventType="touchUpInside" id="sZc-We-SVK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.30910561869999997" green="0.71848465520000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="luf-mX-OVa" firstAttribute="centerY" secondItem="6oP-0T-oLU" secondAttribute="centerY" id="sio-3C-kiM"/>
+                <constraint firstItem="luf-mX-OVa" firstAttribute="centerX" secondItem="6oP-0T-oLU" secondAttribute="centerX" id="tpE-wI-NwB"/>
+            </constraints>
+            <point key="canvasLocation" x="505" y="430"/>
+        </view>
+    </objects>
+</document>
