@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YellowVC" customModule="xib_practice" customModuleProvider="target">
             <connections>
+                <outlet property="backToRedBtn" destination="xPh-PB-y2D" id="6jP-gA-Xrp"/>
                 <outlet property="printYellowLbl" destination="WFi-aT-kCa" id="Jnc-HY-7Dx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Hin-Lj-zLY"/>
             </connections>
@@ -15,13 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-PB-y2D">
-                    <rect key="frame" x="259" y="495" width="82" height="30"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                    <state key="normal" title="Back">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Yellow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFi-aT-kCa" userLabel="labelYellow">
                     <rect key="frame" x="160" y="115" width="280" height="25"/>
                     <constraints>
@@ -32,6 +26,16 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-PB-y2D">
+                    <rect key="frame" x="282" y="494" width="37" height="31"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backToRed:" destination="-1" eventType="touchUpInside" id="vsU-7d-Mn0"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.84951748029999996" blue="0.46505034560000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
