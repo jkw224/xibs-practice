@@ -9,11 +9,15 @@
 import UIKit
 
 class BlueVC: UIViewController {
+    
+    // Properties
+    var redVC: RedVC!
+    
+    // Outlets
 
-    @IBOutlet weak var goToRedBtn: UIButton!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: "BlueVC", bundle: nibBundleOrNil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -31,7 +35,8 @@ class BlueVC: UIViewController {
     }
 
     @IBAction func loadRed(sender: AnyObject) {
-        
+        redVC = RedVC(printStr: "Data from Blue")
+        self.presentViewController(redVC, animated: true, completion: nil)
     }
 
 }

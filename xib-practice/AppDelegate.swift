@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let blueVC = BlueVC.init(nibName: "BlueVC", bundle: NSBundle.mainBundle())
+        let blueVC = BlueVC(nibName: "BlueVC", bundle: NSBundle.mainBundle())
         window?.rootViewController = blueVC
         
         window?.makeKeyAndVisible()

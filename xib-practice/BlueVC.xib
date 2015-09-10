@@ -6,13 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueVC" customModule="xib_practice" customModuleProvider="target">
             <connections>
-                <outlet property="goToRed" destination="luf-mX-OVa" id="smg-WZ-YEE"/>
-                <outlet property="goToRedBtn" destination="luf-mX-OVa" id="aHp-Bi-3ww"/>
-                <outlet property="view" destination="6oP-0T-oLU" id="zaF-AN-cfr"/>
+                <outlet property="view" destination="6oP-0T-oLU" id="W3u-Bt-M3k"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="6oP-0T-oLU">
+        <view contentMode="scaleToFill" id="6oP-0T-oLU" userLabel="BlueView" customClass="B">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -23,7 +21,9 @@
                         <constraint firstAttribute="height" constant="30" id="ZtV-YU-wvg"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="Go To Red"/>
+                    <state key="normal" title="Go To Red">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="loadRed:" destination="-1" eventType="touchUpInside" id="sZc-We-SVK"/>
                     </connections>

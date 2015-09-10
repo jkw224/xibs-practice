@@ -8,17 +8,39 @@
 
 import UIKit
 
-class redVC: UIViewController {
+class RedVC: UIViewController {
     // Properties
-    
+    var yellowVC: YellowVC
     
     // Outlets
     @IBOutlet weak var printLblRed: UILabel!
+    var printStr = ""
+    
+    // ---- Xib Init ----
+    convenience init(printStr: String) {
+        self.init(nibName: "RedVC" , bundle: nil)
+        self.printStr = printStr
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+
+    
+    // ---- Orig Functions ----
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        printLblRed.text = printStr
     }
 
     override func didReceiveMemoryWarning() {
