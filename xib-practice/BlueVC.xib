@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueVC" customModule="xib_practice" customModuleProvider="target">
             <connections>
+                <outlet property="goToRedBtn" destination="luf-mX-OVa" id="vjG-S0-9E0"/>
                 <outlet property="view" destination="6oP-0T-oLU" id="W3u-Bt-M3k"/>
             </connections>
         </placeholder>

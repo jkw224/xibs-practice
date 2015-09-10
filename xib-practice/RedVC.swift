@@ -10,18 +10,38 @@ import UIKit
 
 class RedVC: UIViewController {
     // Properties
-    var yellowVC: YellowVC
+    var yellowVC: YellowVC!
+    var _printStr = ""
     
-    // Outlets
+    // ---- Outlets ----
     @IBOutlet weak var printLblRed: UILabel!
-    var printStr = ""
+    @IBOutlet weak var goToYellowBtn: UIButton!
     
-    // ---- Xib Init ----
-    convenience init(printStr: String) {
-        self.init(nibName: "RedVC" , bundle: nil)
-        self.printStr = printStr
+    // ---- Actions ----
+    @IBAction func goToYellowBtn(sender: AnyObject) {
+        yellowVC = YellowVC(printYellowStr: "Data from Red")
+        self.presentViewController(yellowVC, animated: true, completion: nil)
     }
     
+    // ---- Functions ----
+    
+    
+    // ---- Load Funcs ----
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        printLblRed.text = _printStr
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // ---- Xib Init ----
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -30,22 +50,9 @@ class RedVC: UIViewController {
         super.init(coder: aDecoder)
     }
     
-
-    
-    // ---- Orig Functions ----
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        printLblRed.text = printStr
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    convenience init(printStr: String) {
+        self.init(nibName: "RedVC" , bundle: nil)
+        self._printStr = printStr
     }
     
     
