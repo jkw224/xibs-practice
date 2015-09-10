@@ -10,20 +10,22 @@ import UIKit
 
 class BlueVC: UIViewController {
     
-    // Properties
+    // ---- Properties ----
     var redVC: RedVC!
     
-    // Outlets
+    // ---- Outlets ----
+    @IBOutlet weak var goToRedBtn: UIButton!
 
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    // ---- Actions ----
+    @IBAction func loadRed(sender: AnyObject) {
+        redVC = RedVC(printStr: "Data from Blue")
+        self.presentViewController(redVC, animated: true, completion: nil)
     }
     
+    // ---- Functions ----
+    
+    
+    // ---- Load Func ----
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,10 +36,15 @@ class BlueVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func loadRed(sender: AnyObject) {
-        redVC = RedVC(printStr: "Data from Blue")
-        self.presentViewController(redVC, animated: true, completion: nil)
+    // ---- Xib Init ----
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
 
 }
 

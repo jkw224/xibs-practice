@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedVC" customModule="xib_practice" customModuleProvider="target">
             <connections>
+                <outlet property="goToYellowBtn" destination="d86-V0-KUb" id="9z6-SH-phE"/>
                 <outlet property="printLblRed" destination="oOF-mN-SGb" id="rgF-9P-gdh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="f13-BQ-Cr1"/>
             </connections>
@@ -25,6 +26,9 @@
                     <state key="normal" title="Go To Yellow">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goToYellowBtn:" destination="-1" eventType="touchUpInside" id="Oey-qu-XhA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89p-MR-t4C">
                     <rect key="frame" x="277" y="495" width="46" height="30"/>

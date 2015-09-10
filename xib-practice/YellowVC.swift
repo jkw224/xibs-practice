@@ -9,9 +9,34 @@
 import UIKit
 
 class YellowVC: UIViewController {
+    // ---- Properties ----
+    var _printYellowString = ""
     
+    // ---- Outlets ----
     @IBOutlet weak var printYellowLbl: UILabel!
-                                                                                                    
+    
+    // ---- Actions ----
+    
+    
+    // ---- Functions ----
+    
+    
+    // ---- Load Funcs ----
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        printYellowLbl.text = _printYellowString
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // ---- Xib Init ----
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -20,18 +45,10 @@ class YellowVC: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    convenience init(printYellowStr: String) {
+        self.init(nibName: "YellowVC", bundle: nil)
+        self._printYellowString = printYellowStr
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
