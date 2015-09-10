@@ -14,9 +14,12 @@ class YellowVC: UIViewController {
     
     // ---- Outlets ----
     @IBOutlet weak var printYellowLbl: UILabel!
+    @IBOutlet weak var backToRedBtn: UIButton!
     
     // ---- Actions ----
-    
+    @IBAction func backToRed(sender: AnyObject) {
+        dismissViewControllerAnimated(false, completion: nil)
+    }
     
     // ---- Functions ----
     

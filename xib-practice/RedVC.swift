@@ -23,6 +23,11 @@ class RedVC: UIViewController {
         self.presentViewController(yellowVC, animated: true, completion: nil)
     }
     
+    
+    @IBAction func backToBlue(sender: AnyObject) {
+        dismissViewControllerAnimated(false, completion: nil)
+    }
+    
     // ---- Functions ----
     
     
